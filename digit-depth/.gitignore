@@ -1,0 +1,23 @@
+.idea
+digit_depth/__pycache__/
+digit_depth/digit/__pycache__/
+/*.egg-info
+/dist/
+*.pyc
+.vscode/
+.mypy_cache/
+__pycache__/
+*.pyc
+*.csv
+*.pth
+*.jpg
+ build/
+ datasets/
+build/
+images/
+datasets/
+models/
+outputs
+wandb/
+mm_to_pix
+images_mike
