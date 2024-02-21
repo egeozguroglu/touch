@@ -20,11 +20,15 @@ base_path = Path(__file__).parent.parent.resolve()
 
 @hydra.main(config_path=f"{base_path}/config", config_name="digit.yaml", version_base=None)
 def main(cfg):
-    annot_file = base_path/"csv"/"annotate.csv"
+    # annot_file = "base_path/"csv"/"annotate.csv""
+    annot_file = "/proj/vondrick/shared/touch/calibration_data/gelsight_20777/50_78mm_annotate.csv"
     cfg.dataloader.annot_file = annot_file
     normal_dataloader, normal_dataset = data_loader(
-        dir_dataset=os.path.join(base_path, "images"), params=cfg.dataloader
+        dir_dataset= "/proj/vondrick/shared/touch/calibration_data/gelsight_20777/images_50.78mm", params=cfg.dataloader
     )
+    print(len(normal_dataset))
+    print(len(normal_dataloader))
+
     dirs = [
         f"{base_path}/datasets/A/imgs",
         f"{base_path}/datasets/B/imgs",
@@ -96,7 +100,6 @@ def main(cfg):
     create_train_test_csv(color_path=f'{dirs[2]}/combined.csv',
                           normal_path=f'{dirs[3]}/combined.csv',
                           save_dir=dirs[4])
-
 
 if __name__ == "__main__":
     main()

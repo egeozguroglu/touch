@@ -18,5 +18,4 @@ def data_loader(dir_dataset, params):
                                           transform=transform, annot_flag=params.annot_flag)
     dataloader = DataLoader(dataset, batch_size=params.batch_size, shuffle=params.shuffle,
                             num_workers=params.num_workers)
-
     return dataloader, dataset

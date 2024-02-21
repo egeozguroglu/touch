@@ -22,5 +22,6 @@ def find_recent_model(model_dir):
 
 
 def find_background_img(base_path:str):
-    background_img = glob.glob(f"{base_path}/images/background.png")
+    # background_img = glob.glob(f"{base_path}/images/background.png")
+    background_img = glob.glob("/proj/vondrick/shared/touch/calibration_data/gelsight_20777/images_50.78mm")
     return background_img[0]

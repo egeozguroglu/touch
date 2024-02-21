@@ -34,7 +34,7 @@ sensor:
   gel_min_depth: 0.01954 # gel min depth in meters (max deformation) 
 
 mm_to_pixel: 18.30 #17.15 # 1 mm = 17.15 pixels
-ball_diameter: 24.76 #6.0  # in mm
+ball_diameter: 50.78 #6.0  # in mm
 max_depth: 0.02076 # gel max depth in meters (min deformation)
 
 # Depth configs
@@ -51,7 +51,7 @@ dataloader:
   shuffle: False
   num_workers: 8
   annot_flag: True
-  annot_file: "annotate.csv"
+  annot_file: "/proj/vondrick4/ege/workspace/touch/digit-depth/csv/annotate.csv"
 dataset:
   dataset_type: 'imgs'
   save_dataset: True
