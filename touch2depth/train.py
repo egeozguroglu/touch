@@ -2,18 +2,7 @@
 Adapted from pix2pix official PyTorch implementation
 https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/
 
-To train a pix2pix model for closure variant -> whole with patching policy, run:
-        python3 train.py --dataset_mode closure --model pix2pix --dataroot /local/crv/ege/datasets/closure/closure_patching/train --name closure_patching_policy --n_epochs 100
-
-        To train a pix2pix model for closure variant -> whole with joint boundary policy, run:
-        python3 train.py --dataset_mode closure --model pix2pix --dataroot /local/crv/ege/datasets/closure/closure_boundary/train --name closure_boundary_policy --n_epochs 100
-
-        To train a pix2pix model for closure variant -> whole with occlusion policy, run:
-        python3 train.py --dataset_mode closure --model pix2pix --dataroot /proj/vondrick4/ege/datasets/Closure-and-Whole/ClosureViaOcclusion/train --name closure_via_occlusion --n_epochs 100
-        
-
-        python train.py --dataset_mode closure --model pix2pix --dataroot /proj/vondrick4/ege/datasets/AmodalCOCO/train --name amodalcoco_pix2pix --n_epochs 100 --use_wandb --wandb_project_name artificial-closure 
-
+python train.py --dataset_mode touch --model pix2pix --dataroot /proj/vondrick4/ege/datasets/touch2depth/train --name touch2depth --checkpoints_dir /proj/vondrick/shared/touch/pix2pix  --use_wandb --wandb_project_name touch2depth
 See options/base_options.py and options/train_options.py for more training options.
 """
 import time
